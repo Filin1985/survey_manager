@@ -1,0 +1,69 @@
+@mixin appearance($appearance){
+    -moz-appearance: $appearance;
+    -webkit-appearance: $appearance;
+    appearance: $appearance;
+}
+
+@mixin group($mb) {
+    width: inherit;
+    margin-bottom: $mb;
+}
+
+$colors: (
+  yellow: #F6CF00,
+  blue: #1771E6
+);
+
+%custom-label {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+%custom-select {
+    @include appearance(none);
+    height: 50px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+    border: none;
+    border-radius: 5px !important;
+    font-size: 16px;
+    font-weight: 500;
+    width: inherit;
+    outline: none;
+    text-indent: 1rem;
+    background: url(../../svg/arrow.svg) no-repeat right;
+    background-position-x: calc(100% - 1rem);
+}
+
+.select {
+    @each $status, $color in $colors {
+        &-#{$status} {
+            @extend %custom-select;
+            @if $status == blue {
+                background: url(../../svg/arrowBlue.svg) no-repeat right;
+                background-position-x: calc(100% - 1rem);
+            }
+            &:focus {
+                outline: 3px solid $color;
+            }
+        }
+    }
+}
+
+.select-group {
+    @include group(30px);
+}
+
+.label-group {
+    @include group(15px);
+}
+
+.select-label {
+    @extend %custom-label;
+}
+
+.select-extra-label {
+    @extend %custom-label;
+    color: map-get($colors , yellow );
+    float: right;
+    cursor: pointer;  
+}

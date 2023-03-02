@@ -1,0 +1,38 @@
+.error {
+  position: relative;
+  display: flex;
+  height: 100%;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    max-width: 746px;
+  }
+
+  &__image {
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  &__header {
+    color: #f6cf00;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 120%;
+  }
+
+  &__link {
+    text-decoration: none;
+    cursor: pointer;
+    height: 42px;
+    width: 140px;
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+    background-color: #f6cf00;
+  }
+}

@@ -1,0 +1,54 @@
+@mixin part-block($float) {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  float: $float;
+}
+
+.right {
+  @include part-block(right);
+  z-index: -100;
+  background: linear-gradient(178.96deg, #f6cf00 0.85%, #ffe63c 99.11%);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
+.left {
+  @include part-block(left);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  padding-top: 60px;
+  margin-left: 60px;
+  position: absolute;
+  b {
+    font-size: 24px;
+  }
+  span {
+    color: #f6cf00;
+  }
+}
+
+.carousel__header {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+.carousel__description {
+  @include text(60px, 16px, 500);
+}
+
+.carousel__img {
+  margin-bottom: 175px;
+}
+
+.copywrite__span {
+  color: #9c9ea9;
+  font-size: 14px;
+  font-weight: 500;
+  position: absolute;
+  bottom: 30px;
+  left: 60px;
+}

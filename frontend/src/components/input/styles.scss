@@ -1,0 +1,71 @@
+$colors: (
+  yellow: #f6cf00,
+  blue: #1771e6,
+);
+
+%custom-input-label {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+%custom-input {
+  height: 50px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+  border: none;
+  border-radius: 5px !important;
+  font-size: 18px;
+  font-weight: 500;
+  width: inherit;
+  outline: none;
+  text-indent: 1rem;
+}
+
+.input {
+  @each $status, $color in $colors {
+    &-#{$status} {
+      @extend %custom-input;
+      &:focus {
+        outline: 3px solid $color;
+      }
+    }
+  }
+}
+
+@mixin group($mb) {
+  width: inherit;
+  margin-bottom: $mb;
+}
+
+.input-group {
+  @include group(30px);
+}
+
+.input-label-group {
+  @include group(15px);
+}
+
+.input-label {
+  @extend %custom-input-label;
+}
+
+.input-extra-label {
+  @extend %custom-input-label;
+  color: map-get($colors, yellow);
+  float: right;
+  cursor: pointer;
+}
+
+.password-viewer {
+  width: inherit;
+  margin-top: -30px;
+  padding-right: 1rem;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.password-eye {
+  color: map-get($colors, yellow);
+  float: right;
+  cursor: pointer;
+  pointer-events: auto;
+}
