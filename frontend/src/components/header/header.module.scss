@@ -1,0 +1,109 @@
+$width: 1320px;
+$height: 65px;
+$main-color: #f6cf00;
+$gray-color: #dddfe0;
+$yellow-color: #f6cf00;
+
+%custom-link {
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-block;
+  line-height: 63px;
+  height: 100%;
+  text-decoration: none;
+  border: 3px solid transparent;
+  color: #868686;
+}
+
+.header {
+  width: $width;
+  height: $height;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #dddfe0;
+
+  &__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    list-style: none;
+  }
+
+  &__company {
+    font-weight: 900;
+    color: #000000;
+  }
+
+  &__service {
+    color: $main-color;
+  }
+
+  &__links {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    min-width: 500px;
+    text-decoration: none;
+  }
+
+  &__link {
+    @extend %custom-link;
+
+    &:hover {
+      border-bottom: 3px solid #fed602;
+    }
+  }
+
+  &__link_active {
+    @extend %custom-link;
+    color: #000000;
+    border-bottom: 3px solid #fed602;
+  }
+}
+
+.person {
+  display: flex;
+  align-items: center;
+  padding: 0.5em;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  &:hover {
+    background-color: $gray-color;
+    border-radius: 7px;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 50%;
+    background-color: $yellow-color;
+    color: white;
+    margin-right: 1em;
+    @media screen and (max-width: 720px) {
+      width: 22px;
+      height: 22px;
+      font-size: 12px;
+    }
+  }
+
+  &__data {
+    font-size: 14px;
+    font-weight: 500;
+    display: inline-block;
+    width: fit-content;
+    padding-right: 1em;
+    @media screen and (max-width: 720px) {
+      font-size: 11px;
+    }
+  }
+}
