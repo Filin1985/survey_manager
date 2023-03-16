@@ -1,0 +1,49 @@
+%modal__container {
+  color: white;
+  background-color: #f0f0f0;
+  border-radius: 10%;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+.modal__close {
+  position: absolute;
+  top: 60px;
+  right: 40px;
+  z-index: 1;
+  cursor: pointer;
+  color: black;
+}
+
+.ingredient_container {
+  @extend %modal__container;
+  min-width: 720px;
+  min-height: 538px;
+}
+
+.order__container {
+  @extend %modal__container;
+  width: 720px;
+  height: 718px;
+}
+
+.contractors {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__input {
+    margin: 0 auto;
+    width: 600px;
+    margin-top: 100px;
+    color: black;
+  }
+
+  &__button {
+    padding-top: 40px;
+  }
+}
