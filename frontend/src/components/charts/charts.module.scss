@@ -1,0 +1,70 @@
+@mixin custom-card($width) {
+  width: $width;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  z-index: 1;
+  background-color: #fff;
+}
+
+.chart {
+  @include custom-card(310px);
+
+  &__header {
+    margin: 0;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  &__title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__color {
+    width: 30px;
+    height: 30px;
+  }
+
+  &__name {
+    width: 250px;
+  }
+
+  &__value {
+    text-align: right;
+  }
+
+  &__arrows {
+    display: flex;
+    gap: 10px;
+  }
+}
+
+.chart__padding_less {
+  padding-bottom: 10px;
+}
+
+.chart__height_fix {
+  min-height: 55.5vh;
+}
