@@ -1,0 +1,40 @@
+.welldata__title {
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 19px;
+  margin: 0;
+  padding: 20px 0px 20px 20px;
+  border-bottom: 1px solid #dddfe0;
+}
+
+.welldata__info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.welldata__item {
+  display: flex;
+  padding: 0 20px 0px 23px;
+  justify-content: space-between;
+
+  &:first-of-type {
+    padding-top: 20px;
+  }
+}
+
+.welldata__name {
+  margin: 0;
+}
+
+.welldata__data {
+  margin: 0;
+
+  &_bold {
+    font-weight: bold;
+  }
+}
