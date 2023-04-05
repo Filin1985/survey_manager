@@ -1,0 +1,49 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+
+  &__image {
+    width: 200px;
+    height: 200px;
+    background: url(../../ui-kit/svg/company.png) center no-repeat;
+  }
+
+  &__cards {
+    display: flex;
+    gap: 50px;
+  }
+
+  &__card {
+    min-width: 300px;
+    min-height: 200px;
+    background-color: rgb(82, 82, 82);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+
+    &:hover {
+      transform: scale(0.99);
+    }
+  }
+
+  &__link {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+
+  &__image_bottom {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+    background: url(../../ui-kit/svg/pngwing_2.png) center/cover no-repeat;
+  }
+}

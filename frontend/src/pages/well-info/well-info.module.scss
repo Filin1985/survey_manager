@@ -1,0 +1,129 @@
+%button_properties {
+  height: 45px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background: #1d6fa3;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #fff;
+}
+
+%font__properties {
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: minmax(min-content, max-content);
+  grid-template-areas:
+    "welldata wellact wellact"
+    "welldata parameters parameters"
+    "chart parameters parameters";
+}
+
+.welldata {
+  width: 335px;
+  max-height: 500px;
+  box-shadow: 0px 0px 10px rgba($color: black, $alpha: 0.25);
+  border-radius: 10px;
+  margin-top: 30px;
+  padding-bottom: 20px;
+  grid-area: welldata;
+}
+
+.chart {
+  width: 335px;
+  box-shadow: 0px 0px 10px rgba($color: black, $alpha: 0.25);
+  padding: 5px 0 20px 0;
+  margin-top: 10px;
+  border-radius: 10px;
+  grid-area: chart;
+}
+
+.wellact {
+  grid-area: wellact;
+  margin: 30px 0 0 0;
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__field {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 26px;
+    padding-bottom: 20px;
+  }
+
+  &__number {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+    padding-bottom: 10px;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+    padding-bottom: 10px;
+  }
+
+  &__date {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21px;
+    text-align: right;
+  }
+
+  &__status {
+    margin: 0;
+    color: var(--colors-interface-yellow);
+  }
+
+  &__acts {
+    display: flex;
+    flex-direction: column;
+    margin-top: 52px;
+  }
+
+  &__report {
+    display: flex;
+    gap: 135px;
+  }
+
+  &__stat {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+  }
+
+  &__letter {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__text {
+    @extend %font__properties;
+  }
+}
+
+.parameters {
+  grid-area: parameters;
+}

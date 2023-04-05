@@ -1,0 +1,38 @@
+$width: 1320px;
+
+@mixin chart-type($margin) {
+  margin: 0 auto;
+  margin-top: $margin;
+  width: $width;
+}
+
+.contractors {
+  margin: 0 auto;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 150px 1fr 1fr 1fr;
+    grid-template-areas:
+      "aside buttons buttons"
+      "aside card card"
+      "aside card card"
+      "aside card card";
+    margin-top: 20px;
+  }
+
+  &__charts {
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__buttons {
+    grid-area: buttons;
+  }
+
+  &__card {
+    grid-area: card;
+  }
+}
