@@ -1,0 +1,171 @@
+%text_properties {
+  font-style: normal;
+  line-height: 19px;
+  margin: 0;
+  color: #000;
+  font-size: 16px;
+}
+
+%button_properties {
+  height: 45px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background: #1d6fa3;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #fff;
+}
+
+.wells {
+  display: grid;
+  max-width: 923px;
+  width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: minmax(min-content, max-content);
+  grid-template-areas:
+    "drilling drilling"
+    "waiting finished";
+  column-gap: 50px;
+  row-gap: 30px;
+
+  &__drilling {
+    grid-area: drilling;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: minmax(min-content, max-content);
+    grid-template-areas:
+      "title title title title"
+      "field field date depth"
+      "wellbores wellbores contractor contractor";
+    padding: 20px 30px;
+    background: #f6f7f9;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    row-gap: 10px;
+  }
+
+  &__header {
+    grid-area: title;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__button_all {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 14px;
+    background-color: transparent;
+    border: none;
+    color: #1f50ba;
+    cursor: pointer;
+
+    &:hover {
+      filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.25));
+    }
+  }
+
+  &__type {
+    @extend %text_properties;
+    font-weight: 700;
+  }
+  &__field {
+    display: flex;
+    flex-direction: column;
+    grid-area: field;
+  }
+
+  &__date {
+    grid-area: date;
+  }
+
+  &__depth {
+    grid-area: depth;
+  }
+
+  &__wellbores {
+    grid-area: wellbores;
+  }
+
+  &__contractor {
+    grid-area: contractor;
+    align-self: self-end;
+  }
+
+  &__button_wellbore {
+    @extend %button_properties;
+    width: 200px;
+    margin-right: 15px;
+
+    &:hover {
+      filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.25));
+    }
+  }
+
+  &__link {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  &__button_add {
+    @extend %button_properties;
+
+    &:hover {
+      filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.25));
+    }
+  }
+
+  &__text {
+    @extend %text_properties;
+    font-weight: 400;
+    padding: 0 0 5px 0;
+  }
+
+  &__pending {
+    grid-area: waiting;
+    min-height: 25vh;
+    background: #f6f7f9;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 20px 0 20px 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__completed {
+    grid-area: finished;
+    min-height: 25vh;
+    background: #f6f7f9;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 20px 0 20px 30px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__list {
+    padding: 0;
+    max-height: 28vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: var(--colors-interface-gray-dark)
+      var(--colors-interface-gray);
+  }
+
+  &__list::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &__list::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: var(--colors-interface-gray);
+  }
+
+  &__list::-webkit-scrollbar-thumb {
+    background: var(--colors-interface-gray-dark);
+  }
+}

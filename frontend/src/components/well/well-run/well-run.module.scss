@@ -1,0 +1,98 @@
+%font__properties {
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.wellact__box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wellact__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.wellact__field {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 26px;
+  padding-bottom: 20px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 600px;
+}
+
+.wellact__number {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  padding-bottom: 10px;
+}
+
+.wellact__title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  padding-bottom: 10px;
+}
+
+.wellact__date {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+  text-align: right;
+}
+
+.wellact__status {
+  margin: 0;
+  color: var(--colors-interface-yellow);
+}
+
+.wellact__acts {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-bottom: 52px;
+}
+
+.wellact__report {
+  display: flex;
+  gap: 100px;
+}
+
+.wellact__stat {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+
+.wellact__letter {
+  display: flex;
+  gap: 110px;
+}
+
+.wellact__text {
+  @extend %font__properties;
+}
+
+.wellact__run {
+  display: flex;
+  align-items: center;
+}
+
+.wellact__runnumber {
+  padding: 0;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26px;
+  padding: 0 10px;
+  min-width: 80px;
+  margin-left: 10px;
+}

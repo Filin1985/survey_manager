@@ -1,0 +1,98 @@
+.contractors {
+  max-width: 930px;
+  background-color: #1d6fa3;
+  padding: 15px;
+  border-radius: 10px;
+
+  &__list {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+    border-radius: 10px;
+    min-height: 53vh;
+  }
+
+  &__all {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  &__number {
+    font-weight: bold;
+  }
+
+  &__image {
+    width: 45px;
+    height: 45px;
+    border-radius: 50px;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+  }
+
+  &__card {
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: #fff;
+  }
+
+  &__name {
+    margin-left: 20px;
+  }
+
+  &__subtitle {
+    margin: 10px 0 10px 10px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  &__well {
+    display: flex;
+    padding: 10px;
+  }
+
+  &__paragraph {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.wells__list {
+  padding: 0;
+  max-height: 75vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: var(--colors-interface-gray-dark)
+    var(--colors-interface-gray);
+}
+
+.wells__list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.wells__list::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: var(--colors-interface-gray);
+}
+
+.wells__list::-webkit-scrollbar-thumb {
+  background: var(--colors-interface-gray-dark);
+}

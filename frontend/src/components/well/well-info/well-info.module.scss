@@ -1,0 +1,107 @@
+%font__properties {
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+}
+
+%button_properties {
+  height: 45px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background: #1d6fa3;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #fff;
+}
+
+.wellact__box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wellact__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.wellact__field {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 26px;
+  padding-bottom: 20px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 600px;
+}
+
+.wellact__number {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  padding-bottom: 10px;
+}
+
+.wellact__title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  padding-bottom: 10px;
+}
+
+.wellact__date {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+  text-align: right;
+}
+
+.wellact__status {
+  margin: 0;
+  color: var(--colors-interface-yellow);
+}
+
+.wellact__acts {
+  display: flex;
+  flex-direction: column;
+  margin-top: 52px;
+}
+
+.wellact__report {
+  display: flex;
+  gap: 135px;
+}
+
+.wellact__stat {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+
+.wellact__letter {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wellact__text {
+  @extend %font__properties;
+}
+
+.parameters__button_wellbore {
+  @extend %button_properties;
+  width: 140px;
+  height: 40px;
+  margin-bottom: 10px;
+  margin-top: 30px;
+
+  &:hover {
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.25));
+  }
+}

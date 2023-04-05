@@ -1,0 +1,52 @@
+%modal__container {
+  color: white;
+  background-color: #f0f0f0;
+  border-radius: 10%;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+.modal__close {
+  position: absolute;
+  top: 60px;
+  right: 40px;
+  z-index: 1;
+  cursor: pointer;
+  color: black;
+}
+
+.modal_container {
+  @extend %modal__container;
+  min-width: 620px;
+}
+
+.contractors {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__input {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 470px;
+    color: black;
+  }
+
+  &__button {
+    cursor: pointer;
+  }
+
+  &__container {
+    display: flex;
+  }
+
+  &__column {
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+  }
+}
